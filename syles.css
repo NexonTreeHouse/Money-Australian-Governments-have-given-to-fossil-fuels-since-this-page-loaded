@@ -41,7 +41,6 @@ body {
 .share-wrapper {
 	margin-top: 25px;
 	display: flex;
-	justify-content: space-between;
 }
 
 .share-btn {
