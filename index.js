@@ -1,26 +1,18 @@
 const digit = document.querySelector(".digit");
 const words = document.querySelector(".words");
 const time = document.querySelector(".time");
-const twitterShare = document.querySelector(".twitter-share-button");
 const share = document.querySelector(".share-btn");
 
 const timeOnLoad = new Date().getTime();
 
 setInterval(() => update(), 1);
 
-const update = () => {
+const update = async () => {
 	let timeSince = (new Date().getTime() - timeOnLoad) / 1000;
 
 	let amount = (timeSince * (19686 / 60)).toFixed(2);
 
 	digit.textContent = `$${amount}`;
-
-	twitterShare.setAttribute(
-		"data-text",
-		`In the time I was on this website (${Math.round(
-			timeSince / 60
-		)} minutes) Australian Governments gave $${amount} to fossil fuel companies`
-	);
 
 	let splitAmount = amount.split(".");
 
@@ -28,7 +20,7 @@ const update = () => {
 		splitAmount[1]
 	)} Cents)`;
 
-	time.textContent = Math.round(timeSince);
+	time.textContent = `${Math.round(timeSince / 60)} minutes`;
 };
 
 function copy() {
