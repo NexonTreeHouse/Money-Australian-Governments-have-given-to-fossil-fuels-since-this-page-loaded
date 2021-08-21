@@ -20,7 +20,7 @@ const update = async () => {
 		splitAmount[1]
 	)} Cents)`;
 
-	time.textContent = `${Math.round(timeSince / 60)} minutes`;
+	time.textContent = `${Math.floor(timeSince / 60)} minutes`;
 };
 
 function copy() {
