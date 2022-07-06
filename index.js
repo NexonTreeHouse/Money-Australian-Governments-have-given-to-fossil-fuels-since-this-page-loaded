@@ -10,7 +10,7 @@ setInterval(() => update(), 1);
 const update = async () => {
 	let timeSince = (new Date().getTime() - timeOnLoad) / 1000;
 
-	let amount = (timeSince * (19686 / 60)).toFixed(2);
+	let amount = (timeSince * (22139/ 60)).toFixed(2);
 
 	digit.textContent = `$${amount}`;
 
