@@ -1,41 +1,41 @@
-const digit = document.querySelector(".digit");
-const words = document.querySelector(".words");
+const totalDigit = document.querySelector("#total-digit");
+const totalWords = document.querySelector("#total-words");
 const time = document.querySelector(".time");
-const share = document.querySelector(".share-btn");
+
+
+const totalPerYear = 70439691028;
+
+const totalPerMinute = totalPerYear / 525600;
+const totalPerSecond = totalPerMinute / 60;
 
 const timeOnLoad = new Date().getTime();
 
-setInterval(() => update(), 1);
+setInterval(() => update(), 1000/60);
 
 const update = async () => {
-	let timeSince = (new Date().getTime() - timeOnLoad) / 1000;
+  const timeSince = (new Date().getTime() - timeOnLoad) / 1000;
 
-	let amount = (timeSince * (22139/ 60)).toFixed(2);
+  const totalAmount = (timeSince * (totalPerSecond)).toFixed(2);
 
-	digit.textContent = `$${amount}`;
+  totalDigit.textContent = `$${totalAmount}`;
 
-	let splitAmount = amount.split(".");
+  const splitAmount = totalAmount.split(".");
 
-	words.textContent = `(${toWords(splitAmount[0])} Dollars and ${toWords(
-		splitAmount[1]
-	)} Cents)`;
+  totalWords.textContent = `(${toWords(splitAmount[0])} Dollars and ${toWords(
+    splitAmount[1]
+  )} Cents)`;
 
-	time.textContent = `${Math.floor(timeSince / 60)} minutes`;
+  time.textContent = `${Math.floor(timeSince / 60)} minutes`;
 };
 
 function copy() {
-	const textHolder = document.createElement("textarea");
-	textHolder.value = window.location;
-	document.body.appendChild(textHolder);
-	textHolder.select();
-	document.execCommand("copy");
-	document.body.removeChild(textHolder);
+  const textHolder = document.createElement("textarea");
+  textHolder.value = window.location;
+  document.body.appendChild(textHolder);
+  textHolder.select();
+  document.execCommand("copy");
+  document.body.removeChild(textHolder);
 }
-
-share.addEventListener("click", () => {
-	copy();
-	share.textContent = "Copied";
-});
 
 // prettier-ignore
 {

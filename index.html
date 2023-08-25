@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="syles.css" />
-		<script src="/toWords.js" class="to-words"></script>
-		<title>
-			Money Australian Governments have given to fossil fuel companies since
-			this page loaded.
-		</title>
-	</head>
-	<body>
-		<div class="site-wrapper">
-			<div class="secondary-text">
-				Money Australian Governments have given to fossil fuel companies since
-				this page loaded
-			</div>
-			<div class="digit">$22139.00</div>
-			<div class="words">
-				(nineteen thousand, two hundred and eighty six dollars and zero cents.)
-			</div>
-			<div class="disclaimer">
-				Calculation estimated from subsidies given in the 2021-22 financial
-				year. Find out more
-				<a
-					href="https://australiainstitute.org.au/post/australian-fossil-fuel-subsidies-surge-to-11-6-billion-in-2021-22/"
-					>here</a
-				>.
-			</div>
-			<div class="share-wrapper">
-				<div>
-					<a
-						href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-						class="twitter-share-button"
-						data-text="Look at how much money Australian governments are giving away to fossil fuel companies!!!"
-						data-show-count="false"
-						>Tweet</a
-					>
-					<script
-						async
-						src="https://platform.twitter.com/widgets.js"
-						charset="utf-8"
-					></script>
-				</div>
-				<div class="share-btn">Share</div>
-			</div>
-			<div class="time"></div>
-		</div>
-	</body>
-	<script src="index.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="syles.css" />
+    <base target="_blank" />
+    <title>
+      Money Australian Governments have given to fossil fuel companies since
+      this page loaded.
+    </title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <h1 class="heading-text">
+        Money Australian Governments have given to fossil fuel companies since
+        this page loaded
+      </h1>
+      <div class="digit" id="total-digit"></div>
+      <div class="words" id="total-words"></div>
+
+      <div class="disclaimer">
+        Calculation estimated from subsidies given in the 2022-23 financial
+        year. They are likely giving more now as this number goes up each year
+        despite imminent climate collapse. Find the full IMF report
+        <a
+          href="https://www.imf.org/en/Publications/WP/Issues/2023/08/22/IMF-Fossil-Fuel-Subsidies-Data-2023-Update-537281#:~:text=Globally%2C%20fossil%20fuel%20subsidies%20were,warming%20and%20local%20air%20pollution."
+          >here</a
+        >.
+		<br>
+		Amount is in AUD.
+      </div>
+      <div class="time"></div>
+    </div>
+  </body>
+  <script src="/toWords.js" class="to-words"></script>
+  <script src="index.js"></script>
 </html>
